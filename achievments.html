@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crafts N Cloud technology </title>
+    <link rel="stylesheet" href="templatemo-prism-flux.css">
+<!-- 
+
+TemplateMo 600 Prism Flux
+
+https://templatemo.com/tm-600-prism-flux
+
+-->
+</head>
+<body>
+
+
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <div class="logo-prism">
+                        <div class="prism-shape"></div>
+                    </div>
+                </div>
+                <span class="logo-text">
+                    <span class="prism">Crafts N Cloud </span>
+                    <!--  <span class="prism">Cloud</span> -->
+                </span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Our Services</a></li>
+                <li><a href="achievments.html" class="nav-link">Achievements</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+<br>
+<br>
+
+
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Clients</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #111827, #020617);
+      color: #e5e7eb;
+    }
+
+    .clients-section {
+      padding: 100px 20px;
+    }
+
+    .clients-container {
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+      color: #9ca3af;
+      margin-bottom: 60px;
+    }
+
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+    }
+
+    .client-card {
+      background: linear-gradient(145deg, #0f172a, #020617);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 35px 20px;
+      border-radius: 18px;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .client-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(56, 189, 248, 0.2),
+        transparent
+      );
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .client-card:hover::before {
+      opacity: 1;
+    }
+
+    .client-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      border-color: rgba(56, 189, 248, 0.45);
+      box-shadow: 0 25px 50px rgba(56, 189, 248, 0.18);
+    }
+
+    .client-logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .client-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .client-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .client-card:hover .client-name {
+      color: #38bdf8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: #6b7280;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="clients-section" id="clients">
+    <div class="clients-container">
+      <h2 class="section-title">Our Clients</h2>
+      <p class="section-subtitle">
+        Trusted by leading brands and organizations
+      </p>
+
+      <div class="clients-grid" id="clientsGrid">
+        <!-- JS injects client cards -->
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Crafts n Cloud — Building Trusted Partnerships
+  </footer>
+
+  <script>
+    const clients = [
+      { name: "Ayaan Enterprise", logo: "images/webb.png" },
+      { name: "AdTech Solutions", logo: "" },
+      { name: "MDP Infra", logo: "" },
+      { name: "MPEB Bhopal", logo: "" },
+      { name: "NewRise Tech", logo: "" },
+      { name: "Oracle", logo: "" },
+      { name: "Xtranet", logo: "" }
+    ];
+
+    const clientsGrid = document.getElementById("clientsGrid");
+
+    clients.forEach(client => {
+      const card = document.createElement("div");
+      card.className = "client-card";
+
+      card.innerHTML = `
+        <div class="client-logo">
+          <img src="${client.logo}" alt="${client.name} logo">
+        </div>
+        <div class="client-name">${client.name}</div>
+      `;
+
+      clientsGrid.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <div class="logo-prism">
+                            <div class="prism-shape"></div>
+                        </div>
+                    </div>
+                    <span class="logo-text">
+                        <span class="prism">Crafts N Cloud</span>
+                        <!--<span class="flux">FLUX</span>-->
+                    </span>
+                </div>
+                <p class="footer-description">
+                    Refracting complex challenges into brilliant solutions through the convergence of art, science, and technology.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">t</a>
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">ig</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Services</h4>
+                <div class="footer-links">
+                    <a href="#">Web Development</a>
+                    <a href="#">App Development</a>
+                    <a href="#">Cloud Solutions</a>
+                    <a href="#">AI Integration</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Company</h4>
+                <div class="footer-links">
+                    <a href="#">About Us</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press Kit</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <div class="footer-links">
+                    <a href="#">Documentation</a>
+                    <a href="#">API Reference</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                © 2025 Crafts N Cloud . All rights reserved.
+            </div>
+            <div class="footer-credits">
+                Designed by <a href="" rel="nofollow" target="_blank">CraftsNCloud</a>
+            </div>
+        </div>
+    </footer>
+<script src="templatemo-prism-scripts.js"></script>
+</body>
+</html>
