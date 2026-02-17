@@ -14,37 +14,7 @@ https://templatemo.com/tm-600-prism-flux
 -->
 </head>
 <body>
-
-
-    <!-- Navigation Header -->
-    <header class="header" id="header">
-        <nav class="nav-container">
-            <a href="#home" class="logo">
-                <div class="logo-icon">
-                    <div class="logo-prism">
-                        <div class="prism-shape"></div>
-                    </div>
-                </div>
-                <span class="logo-text">
-                    <span class="prism">Crafts N Cloud </span>
-                    <!--  <span class="prism">Cloud</span> -->
-                </span>
-            </a>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="services.html" class="nav-link">Our Services</a></li>
-                <li><a href="achievments.html" class="nav-link">Achievements</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            
-        </nav>
-    </header>
-<br>
-<br>
-
-
+<?php include "header.php"; ?>
 
   <!DOCTYPE html>
 <html lang="en">
@@ -188,12 +158,12 @@ https://templatemo.com/tm-600-prism-flux
   <script>
     const clients = [
       { name: "Ayaan Enterprise", logo: "images/webb.png" },
-      { name: "AdTech Solutions", logo: "" },
-      { name: "MDP Infra", logo: "" },
-      { name: "MPEB Bhopal", logo: "" },
-      { name: "NewRise Tech", logo: "" },
+      { name: "AdTech Solutions", logo: "images/adtech.png" },
+      { name: "MDP Infra", logo: "images/mdp.png" },
+      { name: "MPEB Bhopal", logo: "images/mpeb.jpg" },
+      { name: "NewRise Tech", logo: "images/newrise.jpg" },
       { name: "Oracle", logo: "" },
-      { name: "Xtranet", logo: "" }
+      { name: "Xtranet", logo: "images/extranet.png" }
     ];
 
     const clientsGrid = document.getElementById("clientsGrid");
@@ -217,78 +187,9 @@ https://templatemo.com/tm-600-prism-flux
 </html>
 
 
+<?php include "footer.php"; ?>
 
 
-
-
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <div class="footer-logo">
-                    <div class="logo-icon">
-                        <div class="logo-prism">
-                            <div class="prism-shape"></div>
-                        </div>
-                    </div>
-                    <span class="logo-text">
-                        <span class="prism">Crafts N Cloud</span>
-                        <!--<span class="flux">FLUX</span>-->
-                    </span>
-                </div>
-                <p class="footer-description">
-                    Refracting complex challenges into brilliant solutions through the convergence of art, science, and technology.
-                </p>
-                <div class="footer-social">
-                    <a href="#" class="social-icon">f</a>
-                    <a href="#" class="social-icon">t</a>
-                    <a href="#" class="social-icon">in</a>
-                    <a href="#" class="social-icon">ig</a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Services</h4>
-                <div class="footer-links">
-                    <a href="#">Web Development</a>
-                    <a href="#">App Development</a>
-                    <a href="#">Cloud Solutions</a>
-                    <a href="#">AI Integration</a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Company</h4>
-                <div class="footer-links">
-                    <a href="#">About Us</a>
-                    <a href="#">Our Team</a>
-                    <a href="#">Careers</a>
-                    <a href="#">Press Kit</a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <div class="footer-links">
-                    <a href="#">Documentation</a>
-                    <a href="#">API Reference</a>
-                    <a href="#">Blog</a>
-                    <a href="#">Support</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div class="copyright">
-                © 2025 Crafts N Cloud . All rights reserved.
-            </div>
-            <div class="footer-credits">
-                Designed by <a href="" rel="nofollow" target="_blank">CraftsNCloud</a>
-            </div>
-        </div>
-    </footer>
 <script src="templatemo-prism-scripts.js"></script>
 </body>
 </html>
