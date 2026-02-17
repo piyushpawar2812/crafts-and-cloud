@@ -1,7 +1,7 @@
     <!-- Navigation Header -->
     <header class="header" id="header">
         <nav class="nav-container">
-            <a href="#home" class="logo">
+            <a href="index.php" class="logo">
                 <div class="logo-icon">
                     <div class="logo-prism">
                         <div class="prism-shape"></div>
@@ -23,6 +23,23 @@
 
 
         </nav>
+  <!--to active toggle bar-->
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname.split("/").pop() || "services.php";
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    navLinks.forEach(link => {
+        const href = link.getAttribute("href");
+        if (href === currentPath) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+});
+</script>
+        
     </header>
 <br>
 <br>
