@@ -7,15 +7,13 @@
     <link rel="stylesheet" href="templatemo-prism-flux.css">
 <!-- 
 
-TemplateMo 600 Prism Flux
-
-https://templatemo.com/tm-600-prism-flux
 
 -->
 </head>
 <body>
 <?php include "header.php"; ?>
-
+<br>
+    <br><br>
  <!-- Contact Section 
     <section class="contact-section" id="contact">-->
         <div class="section-header">
