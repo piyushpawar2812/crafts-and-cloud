@@ -188,7 +188,28 @@
                 </a>
             </div>
             
-            <form class="contact-form" id="contactForm">
+            <?php
+if(isset($_GET['status'])) {
+    if($_GET['status'] == "success") {
+        echo "
+        <script>
+            alert('Message sent successfully!');
+            window.history.replaceState({}, document.title, window.location.pathname);
+        </script>
+        ";
+    } elseif($_GET['status'] == "error") {
+        echo "
+        <script>
+            alert('Something went wrong. Try again.');
+            window.history.replaceState({}, document.title, window.location.pathname);
+        </script>
+        ";
+    }
+}
+?>
+            
+            <form class="contact-form" id="contactForm" method="POST"
+                                                action="contact_process.php">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -203,7 +224,10 @@
                     <label for="subject">Subject</label>
                     <input type="text" id="subject" name="subject" required>
                 </div>
-                
+                <div class="form-group">
+                    <label for="subject">Services</label>
+                    <input type="text" id="services" name="services" required>
+                </div>
                 <div class="form-group">
                     <label for="message">Message</label>
                     <textarea id="message" name="message" required></textarea>
@@ -213,6 +237,8 @@
             </form>
         </div>
     </section>
+
+
 
 <?php include "footer.php"; ?>
 <script src="templatemo-prism-scripts.js"></script>

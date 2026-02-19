@@ -13,6 +13,7 @@
                 </span>
             </a>
 
+
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.php" class="nav-link active" section id="home">Home</a></li>
                 <li><a href="about.php" class="nav-link" section id="about">About</a></li>
@@ -23,10 +24,12 @@
 
 
         </nav>
+        
   <!--to active toggle bar-->
   <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const currentPath = window.location.pathname.split("/").pop() || "services.php";
+    const currentPath = window.location.pathname.split("/").pop() || "index.php";
+>>>>>>> 745f3c1 (Initial commit)
     const navLinks = document.querySelectorAll(".nav-link");
 
     navLinks.forEach(link => {
@@ -39,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
-        
     </header>
 <br>
 <br>

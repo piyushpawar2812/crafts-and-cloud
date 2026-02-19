@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crafts N Cloud technology </title>
     <link rel="stylesheet" href="templatemo-prism-flux.css">
-<!-- 
 
-
--->
 </head>
 <body>
 <?php include "header.php"; ?>
 <br>
-    <br><br>
  <!-- Contact Section 
     <section class="contact-section" id="contact">-->
         <div class="section-header">
@@ -55,26 +51,29 @@
                     </div>
                 </a>
             </div>
-        <?php
+ <?php
+$status = "";
+
 if(isset($_GET['status'])) {
     if($_GET['status'] == "success") {
-        echo "<div style='color:green; padding:10px;'>Message sent successfully!</div>";
+        $status = "success";
     } elseif($_GET['status'] == "error") {
-        echo "<div style='color:red; padding:10px;'>Something went wrong. Try again.</div>";
+        $status = "error";
     }
 }
 ?>
-            
+<div id="toast" class="toast"></div>            
+
             <form class="contact-form" id="contactForm" method="POST"
                                                 action="contact_process.php">
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+                    <input  placeholder="Name" type="text" id="name" name="name" required>
                 </div>
                 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input placeholder="hello@aaaa.com" type="email" id="email" name="email" required>
                 </div>
                 
                 <div class="form-group">
@@ -95,11 +94,80 @@ if(isset($_GET['status'])) {
         </div>
     </section>
 
+    
+
 
 <?php include "footer.php"; ?>
 
 
 
 <script src="templatemo-prism-scripts.js"></script>
+
+
+
+<style>
+
+.toast {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    padding: 16px 22px;
+    min-width: 260px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    backdrop-filter: blur(14px);
+    background: rgba(30, 41, 59, 0.85);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    transform: translateX(120%);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 9999;
+}
+
+.toast.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.toast.success {
+    border-left: 5px solid #22c55e;
+}
+
+.toast.error {
+    border-left: 5px solid #ef4444;
+}
+
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const status = "<?php echo $status; ?>";
+    const toast = document.getElementById("toast");
+
+    if (status === "success") {
+        showToast("✅ Message sent successfully!", "success");
+    }
+
+    if (status === "error") {
+        showToast("❌ Something went wrong. Try again.", "error");
+    }
+
+    function showToast(message, type) {
+        toast.textContent = message;
+        toast.className = "toast show " + type;
+
+        setTimeout(() => {
+            toast.classList.remove("show");
+        }, 4000);
+
+        // Remove ?status= from URL without reload
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
+});
+</script>
+
 </body>
 </html>
